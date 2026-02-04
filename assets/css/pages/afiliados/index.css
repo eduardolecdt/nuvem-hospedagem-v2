@@ -1,0 +1,15 @@
+/* Global */
+@import '../../global/global.css';
+
+/* Elementos */
+@import '../../elementos/nav.css';
+@import '../../elementos/footer.css';
+
+/* Section */
+@import '../../sections/section-apresentacao.css';
+@import '../../sections/section-modelamos.css';
+@import '../../sections/section-servidores.css';
+@import '../../sections/section-velocidade.css';
+@import '../../sections/section-depoimentos.css';
+@import '../../sections/section-duvidas.css';
+@import '../../sections/section-suporte.css';

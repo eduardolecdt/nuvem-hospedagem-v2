@@ -1,0 +1,212 @@
+/* 
+<section class="parceiros"> 
+*/
+section.parceiros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--cor-gelo);
+  overflow: hidden;
+}
+section.parceiros.dois {
+  background-color: var(--cor-branco);
+}
+section.parceiros.animar .texto {
+  animation: textoParceiros 1s ease-in-out;
+}
+@keyframes textoParceiros {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 0);
+  }
+}
+section.parceiros .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+  padding: 80px 60px;
+}
+section.parceiros .texto h2 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-preto);
+  line-height: 1.3;
+}
+section.parceiros .texto h3 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-ciano);
+  line-height: 1.3;
+}
+section.parceiros .texto p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+  width: 100%;
+  max-width: 400px;
+}
+section.parceiros.animar .slide {
+  animation: slideParceiros 1s ease-in-out;
+}
+@keyframes slideParceiros {
+  0% {
+    opacity: 0;
+  }
+}
+section.parceiros .slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+}
+section.parceiros.dois .slide .sombra {
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF00);
+  background: -webkit-linear-gradient(0deg, #FFFFFF, #FFFFFF00);
+}
+section.parceiros .slide .sombra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(0deg, #EDF6FC, #edf6fc00);
+  background: -webkit-linear-gradient(0deg, #EDF6FC, #edf6fc00);
+  z-index: 2;
+}
+section.parceiros .slide .sombra.dois {
+  display: none;
+}
+section.parceiros .slide .parte {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 20px 0;
+}
+section.parceiros .slide .parte.um {
+  justify-content: flex-start;
+  animation: parteUmParceiros 240s linear infinite;
+}
+@keyframes parteUmParceiros {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-1100px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+section.parceiros .slide .parte.dois {
+  justify-content: flex-end;
+  animation: parteDoisParceiros 240s linear infinite;
+}
+@keyframes parteDoisParceiros {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1100px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+section.parceiros .slide .parte img {
+  min-width: 100px;
+  max-width: 100px;
+  margin: 0 40px 0 0;
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.parceiros {
+    flex-direction: column;
+  }
+  section.parceiros .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 50px 30px 30px 30px;
+  }
+  section.parceiros .texto p {
+    font-size: var(--f2);
+    max-width: 300px;
+  }
+  section.parceiros .texto h2 {
+    font-size: var(--f5);
+  }
+  section.parceiros .texto h3 {
+    font-size: var(--f5);
+  }
+  section.parceiros .slide {
+    width: 100%;
+    padding: 0 0 40px 0;
+  }
+  section.parceiros .slide .sombra {
+    width: 100px;
+  }
+  section.parceiros.dois .slide .sombra.dois {
+    background: linear-gradient(180deg, #FFFFFF, #FFFFFF00);
+    background: -webkit-linear-gradient(180deg, #FFFFFF, #FFFFFF00);
+  }
+  section.parceiros .slide .sombra.dois {
+    display: flex;
+    background: linear-gradient(180deg, #EDF6FC, #edf6fc00);
+    background: -webkit-linear-gradient(180deg, #EDF6FC, #edf6fc00);
+    left: auto;
+    right: 0;
+  }
+  section.parceiros .slide .parte {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 20px 0;
+  }
+  section.parceiros .slide .parte.um {
+    justify-content: flex-start;
+    animation: parteUmParceiros 240s linear infinite;
+  }
+  @keyframes parteUmParceiros {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-1100px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  section.parceiros .slide .parte.dois {
+    justify-content: flex-end;
+    animation: parteDoisParceiros 240s linear infinite;
+  }
+  @keyframes parteDoisParceiros {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(1100px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  section.parceiros .slide .parte img {
+    min-width: 100px;
+    max-width: 100px;
+    margin: 0 40px 0 0;
+  }
+}

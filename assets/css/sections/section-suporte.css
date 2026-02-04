@@ -1,0 +1,209 @@
+/* 
+<section class="suporte"> 
+*/
+section.suporte {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor-escuro-1);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 130px 60px 60px 60px;
+}
+section.suporte img.divisor {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+}
+section.suporte.animar .whatsapp {
+  animation: whatsappSuporte 1s ease-in-out;
+}
+@keyframes whatsappSuporte {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+}
+section.suporte .whatsapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: var(--cor-escuro-2);
+  width: calc(25% - 10px);
+  opacity: 1;
+  transform: translate(0, 0);
+}
+section.suporte .whatsapp .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: var(--cor-escuro-3);
+}
+section.suporte .whatsapp .icone img {
+  width: 100%;
+  max-width: 40px;
+}
+section.suporte .whatsapp p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  margin: 20px 0 0 0;
+  width: 100%;
+  max-width: 200px;
+}
+section.suporte .whatsapp p span {
+  font-family: var(--bold);
+}
+section.suporte .imagem {
+  width: calc(35% - 10px);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+section.suporte.animar .quadro {
+  animation: quadroSuporte 1s ease-in-out;
+}
+@keyframes quadroSuporte {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+}
+section.suporte .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(40% - 10px);
+  background-color: var(--cor-escuro-2);
+  border-radius: 10px;
+  padding: 40px;
+}
+section.suporte .quadro .tag {
+  display: flex;
+  align-items: center;
+}
+section.suporte .quadro .tag img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 10px 0 0;
+}
+section.suporte .quadro .tag h3 {
+  font-family: var(--semibold);
+  font-size: var(--f1);
+  color: var(--cor-verde);
+}
+section.suporte .quadro h2 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-branco);
+  line-height: 1.3;
+  margin: 10px 0 5px 0;
+}
+section.suporte .quadro h2 span {
+  color: var(--cor-ciano);
+}
+section.suporte .quadro p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+section.suporte .quadro a {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-ciano);
+  padding: 10px 25px 10px 10px;
+  border-radius: 50px;
+  margin: 20px 0 0 0;
+  transition: all 0.3s;
+}
+section.suporte .quadro a:hover {
+  filter: brightness(110%);
+}
+section.suporte .quadro a h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+}
+section.suporte .quadro a .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-branco);
+  margin: 0 10px 0 0;
+}
+section.suporte .quadro a .icone img {
+  width: 100%;
+  max-width: 20px;
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.suporte {
+    flex-direction: column;
+    padding: 70px 30px 50px 30px;
+  }
+  section.suporte img.divisor {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+  }
+  section.suporte .whatsapp {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 25px;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  section.suporte .whatsapp .icone {
+    width: 60px;
+    height: 60px;
+  }
+  section.suporte .whatsapp .icone img {
+    max-width: 25px;
+  }
+  section.suporte .whatsapp p {
+    margin: 0 0 0 20px;
+    max-width: 300px;
+  }
+  section.suporte .whatsapp p span {
+    font-family: var(--bold);
+  }
+  section.suporte .imagem {
+    width: 100%;
+    margin: 0 0 20px 0;
+    min-height: 200px;
+  }
+  section.suporte .quadro {
+    width: 100%;
+    padding: 35px 25px;
+  }
+  section.suporte .quadro h2 {
+    font-size: var(--f5);
+  }
+  section.suporte .quadro p {
+    font-size: var(--f2);
+  }
+  section.suporte .quadro a {
+    padding: 10px 35px 10px 10px;
+    margin: 15px 0 0 0;
+  }
+  section.suporte .quadro a h3 {
+    font-size: var(--f2);
+  }
+}

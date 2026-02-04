@@ -1,0 +1,14 @@
+/* Global */
+@import '../../global/global.css';
+
+/* Elementos */
+@import '../../elementos/nav.css';
+@import '../../elementos/footer.css';
+
+/* Section */
+@import '../../sections/section-apresentacao.css';
+@import '../../sections/section-beneficios.css';
+@import '../../sections/section-configuracoes.css';
+@import '../../sections/section-depoimentos.css';
+@import '../../sections/section-pergunta.css';
+@import '../../sections/section-migrar.css';

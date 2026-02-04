@@ -1,0 +1,437 @@
+/* 
+<section class="grafico"> 
+*/
+section.grafico {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor-escuro-1);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 130px 60px 60px 60px;
+}
+section.grafico img.divisor {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+}
+section.grafico.animar .quadro {
+  animation: quadroGrafico 1s ease-in-out;
+}
+@keyframes quadroGrafico {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 0);
+  }
+}
+section.grafico .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: var(--cor-escuro-2);
+  width: calc(20% - 10px);
+}
+section.grafico .quadro p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 0 30px 0;
+}
+section.grafico .quadro p span {
+  font-family: var(--semibold);
+}
+section.grafico .quadro .linhas {
+  display: flex;
+  align-items: flex-end;
+}
+section.grafico .quadro .linhas .linha {
+  width: 5px;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+section.grafico .quadro .linhas .linha.um {
+  height: 200px;
+  background: linear-gradient(90deg, #ec548900, #EC548A);
+  background: -webkit-linear-gradient(90deg, #ec548900, #EC548A);
+}
+section.grafico .quadro .linhas .linha.dois {
+  height: 240px;
+  background: linear-gradient(90deg, #2DC8D300, #2DC8D3);
+  background: -webkit-linear-gradient(90deg, #2DC8D300, #2DC8D3);
+}
+section.grafico .quadro .linhas .linha.tres {
+  height: 180px;
+  background: linear-gradient(90deg, #D4C53700, #D4C537);
+  background: -webkit-linear-gradient(90deg, #D4C53700, #D4C537);
+}
+section.grafico.animar .itens {
+  animation: itensGrafico 1s ease-in-out;
+}
+@keyframes itensGrafico {
+  0% {
+    opacity: 0;
+  }
+}
+section.grafico .itens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(30% - 10px);
+}
+section.grafico .itens .item.um {
+  margin: 0;
+}
+section.grafico .itens .item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  height: 100%;
+  background-color: var(--cor-escuro-2);
+  border-radius: 10px;
+  margin: 20px 0 0 0;
+}
+section.grafico .itens .item .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: var(--cor-escuro-3);
+}
+section.grafico .itens .item .icone img {
+  width: 100%;
+  max-width: 30px;
+}
+section.grafico .itens .item p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  padding: 0 0 0 20px;
+}
+section.grafico .itens .item p span {
+  font-family: var(--semibold);
+}
+section.grafico .visualizacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(50% - 10px);
+  background-color: var(--cor-escuro-2);
+  position: relative;
+  border-radius: 10px;
+}
+section.grafico .visualizacao .nomes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  width: 100%;
+  background-color: var(--cor-escuro-3);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+section.grafico .visualizacao .nomes .nome {
+  display: flex;
+  align-items: center;
+}
+section.grafico .visualizacao .nomes .nome span {
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  margin: 0 10px 0 0;
+}
+section.grafico .visualizacao .nomes .nome.um span {
+  background-color: #EC548B;
+}
+section.grafico .visualizacao .nomes .nome.dois span {
+  background-color: #2BC1CB;
+}
+section.grafico .visualizacao .nomes .nome.tres span {
+  background-color: #D5C639;
+}
+section.grafico .visualizacao .nomes .nome p {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-branco);
+}
+section.grafico .visualizacao .fundo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 120px 30px 30px 30px;
+  z-index: 1;
+}
+section.grafico .visualizacao .fundo .linha {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+section.grafico .visualizacao .fundo .linha p {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: #ffffff46;
+  margin: 0 10px 0 0;
+  word-break: keep-all;
+}
+section.grafico .visualizacao .fundo .linha .risco {
+  border: 1px dashed #ffffff1d;
+  width: 100%;
+}
+section.grafico .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 40px;
+  z-index: 3;
+}
+section.grafico .info.um {
+  left: 100px;
+}
+section.grafico .info.dois {
+  left: 45%;
+}
+section.grafico .info.tres {
+  right: 30px;
+}
+section.grafico .info p {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  width: 100%;
+  max-width: 140px;
+  margin: 0 0 25px 0;
+}
+section.grafico .info.um p {
+  font-family: var(--semibold);
+}
+section.grafico .info .linhas {
+  display: flex;
+  align-items: flex-end;
+}
+section.grafico .info .linhas .linha {
+  width: 5px;
+  border-radius: 10px;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+section.grafico.animar .info .linhas .linha {
+  animation: linhaGrafico 3s ease-in-out;
+}
+@keyframes linhaGrafico {
+  0% {
+    height: 0px;
+  }
+}
+section.grafico .info .linhas .linha.um {
+  background: linear-gradient(90deg, #ec548900, #EC548A);
+  background: -webkit-linear-gradient(90deg, #ec548900, #EC548A);
+}
+section.grafico .info .linhas .linha.dois {
+  background: linear-gradient(90deg, #2DC8D300, #2DC8D3);
+  background: -webkit-linear-gradient(90deg, #2DC8D300, #2DC8D3);
+}
+section.grafico .info .linhas .linha.tres {
+  background: linear-gradient(90deg, #D4C53700, #D4C537);
+  background: -webkit-linear-gradient(90deg, #D4C53700, #D4C537);
+}
+section.grafico .info.um .linhas .linha.um {
+  height: 240px;
+}
+section.grafico .info.um .linhas .linha.dois {
+  height: 260px;
+}
+section.grafico .info.um .linhas .linha.tres {
+  height: 210px;
+}
+section.grafico .info.dois .linhas .linha.um {
+  height: 85px;
+}
+section.grafico .info.dois .linhas .linha.dois {
+  height: 140px;
+}
+section.grafico .info.dois .linhas .linha.tres {
+  height: 90px;
+}
+section.grafico .info.tres .linhas .linha.um {
+  height: 8px;
+}
+section.grafico .info.tres .linhas .linha.dois {
+  height: 16px;
+}
+section.grafico .info.tres .linhas .linha.tres {
+  height: 12px;
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.grafico {
+    flex-direction: column;
+    padding: 60px 30px 60px 30px;
+  }
+  section.grafico img.divisor {
+    left: -5%;
+    width: 110%;
+  }
+  section.grafico .quadro {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 25px;
+    width: 100%;
+  }
+  section.grafico .quadro p {
+    font-size: var(--f1);
+    text-align: left;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 20px 0 0;
+  }
+  section.grafico .quadro .linhas {
+    flex-direction: column;
+    width: 100%;
+  }
+  section.grafico .quadro .linhas .linha {
+    width: 100%;
+    margin: 5px 0;
+  }
+  section.grafico .quadro .linhas .linha.um {
+    height: 3px;
+    max-width: 70px;
+    background: linear-gradient(0deg, #ec548900, #EC548A);
+    background: -webkit-linear-gradient(0deg, #ec548900, #EC548A);
+  }
+  section.grafico .quadro .linhas .linha.dois {
+    height: 3px;
+    max-width: 130px;
+    background: linear-gradient(0deg, #2DC8D300, #2DC8D3);
+    background: -webkit-linear-gradient(0deg, #2DC8D300, #2DC8D3);
+  }
+  section.grafico .quadro .linhas .linha.tres {
+    height: 3px;
+    max-width: 100px;
+    background: linear-gradient(0deg, #D4C53700, #D4C537);
+    background: -webkit-linear-gradient(0deg, #D4C53700, #D4C537);
+  }
+  section.grafico .itens {
+    width: 100%;
+  }
+  section.grafico .itens .item.um {
+    margin: 20px 0 0 0;
+  }
+  section.grafico .itens .item {
+    padding: 15px;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  section.grafico .itens .item .icone {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+  }
+  section.grafico .itens .item .icone img {
+    width: 100%;
+    max-width: 25px;
+  }
+  section.grafico .itens .item p {
+    font-size: var(--f2);
+    padding: 0 0 0 15px;
+  }
+  section.grafico .visualizacao {
+    width: 100%;
+    min-height: 320px;
+    margin: 20px 0 0 0;
+  }
+  section.grafico .visualizacao .nomes {
+    justify-content: center;
+    padding: 15px 15px;
+  }
+  section.grafico .visualizacao .nomes .nome {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.grafico .visualizacao .nomes .nome span {
+    width: 8px;
+    height: 8px;
+    margin: 0 0 10px 0;
+  }
+  section.grafico .visualizacao .nomes .nome p {
+    max-width: 100px;
+    text-align: center;
+  }
+  section.grafico .visualizacao .fundo {
+    padding: 140px 20px 20px 20px;
+  }
+  section.grafico .visualizacao .fundo .linha p {
+    margin: 0 8px 0 0;
+  }
+  section.grafico .info {
+    bottom: 20px;
+  }
+  section.grafico .info.um {
+    left: 80px;
+  }
+  section.grafico .info.dois {
+    left: 45%;
+  }
+  section.grafico .info.tres {
+    right: 20px;
+  }
+  section.grafico .info p {
+    max-width: 100px;
+    margin: 0 0 15px 0;
+  }
+  section.grafico .info .linhas .linha {
+    width: 4px;
+    margin: 0 3px;
+  }
+  section.grafico .info.um .linhas .linha.um {
+    height: 150px;
+  }
+  section.grafico .info.um .linhas .linha.dois {
+    height: 160px;
+  }
+  section.grafico .info.um .linhas .linha.tres {
+    height: 140px;
+  }
+  section.grafico .info.dois .linhas .linha.um {
+    height: 70px;
+  }
+  section.grafico .info.dois .linhas .linha.dois {
+    height: 80px;
+  }
+  section.grafico .info.dois .linhas .linha.tres {
+    height: 60px;
+  }
+  section.grafico .info.tres .linhas .linha.um {
+    height: 8px;
+  }
+  section.grafico .info.tres .linhas .linha.dois {
+    height: 16px;
+  }
+  section.grafico .info.tres .linhas .linha.tres {
+    height: 12px;
+  }
+}

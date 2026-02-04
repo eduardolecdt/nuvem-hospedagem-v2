@@ -1,0 +1,324 @@
+/* 
+<nav> 
+*/
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+nav .tamanho {
+  height: 90px;
+  width: 100%;
+}
+nav .conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffffe1;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0 60px;
+  z-index: 10;
+}
+nav .conteudo a.logo img {
+  width: 100%;
+  max-width: 220px;
+}
+nav .conteudo .opcoes {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav .conteudo .opcoes a,
+nav .conteudo .opcoes button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin: 0 0 0 20px;
+  position: relative;
+  transition: all 0.3s;
+}
+nav .conteudo .opcoes a:hover,
+nav .conteudo .opcoes button:hover {
+  opacity: 0.5;
+}
+nav .conteudo .opcoes a p,
+nav .conteudo .opcoes button p {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-preto);
+}
+nav .conteudo .opcoes a img.icone,
+nav .conteudo .opcoes button img.icone {
+  width: 15px;
+  max-width: 15px;
+  max-height: 15px;
+  margin: 0 10px 0 0;
+}
+nav .conteudo .opcoes a img.setinha,
+nav .conteudo .opcoes button img.setinha {
+  width: 12px;
+  max-width: 12px;
+  margin: 0 0 0 10px;
+}
+nav .conteudo .opcoes a.entrar {
+  margin-left: auto;
+}
+nav .conteudo .opcoes a.hospedar {
+  background-color: var(--cor-musgo);
+  padding: 13px 20px;
+  border-radius: 50px;
+}
+nav .conteudo .opcoes a.hospedar:hover {
+  background-color: var(--cor-verde);
+  opacity: 1;
+}
+nav .conteudo .opcoes a.hospedar p {
+  font-family: var(--semibold);
+  color: var(--cor-branco);
+}
+nav .conteudo .opcoes .opcao {
+  position: relative;
+}
+nav .conteudo .opcoes .opcao.ativo button img.setinha {
+  transform: rotate(-180deg);
+}
+nav .conteudo .opcoes .opcao .subOpcoes {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--cor-branco);
+  box-shadow: 0 10px 30px 0 #12122b34;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 300px;
+  max-width: 300px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+nav .conteudo .opcoes .opcao.ativo .subOpcoes {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: scale(1);
+}
+nav .conteudo .opcoes .opcao .subOpcoes a {
+  margin: 0;
+  padding: 10px 0;
+}
+nav .conteudo .opcoes .opcao .subOpcoes a p {
+  transition: all 0.3s;
+}
+nav .conteudo .opcoes .opcao .subOpcoes a:hover p {
+  padding: 0 0 0 10px;
+}
+nav .conteudo button.menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  position: relative;
+}
+nav .conteudo button.menu span {
+  position: absolute;
+  background-color: var(--cor-preto);
+  right: 0;
+  transition: all 0.3s;
+}
+nav .conteudo button.menu span.um {
+  width: 35px;
+  height: 3px;
+  position: absolute;
+  top: 10px;
+}
+nav .conteudo button.menu span.dois {
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  bottom: 10px;
+}
+nav .conteudo button.menu.ativo span {
+  background-color: var(--cor-vermelho);
+}
+nav .conteudo button.menu.ativo span.um {
+  transform: rotate(45deg);
+  top: 15px;
+}
+nav .conteudo button.menu.ativo span.dois {
+  transform: rotate(-45deg);
+  bottom: 15px;
+  width: 35px;
+}
+nav .faixa {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: var(--cor-escuro-1);
+  padding: 0 60px;
+  z-index: 9;
+  transition: all 0.3s;
+}
+nav.scroll .faixa {
+  background-color: var(--cor-ciano);
+}
+nav .faixa h3 {
+  font-family: var(--semibold);
+  font-size: var(--f1);
+  color: var(--cor-branco);
+  margin-right: auto;
+}
+nav .faixa a {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin: 0 0 0 20px;
+  transition: all 0.3s;
+}
+nav .faixa a:hover {
+  opacity: 0.8;
+}
+nav .faixa a p {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-branco);
+}
+nav .faixa a img {
+  width: 12px;
+  max-width: 12px;
+  margin: 0 0 0 5px;
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  nav .tamanho {
+    height: 90px;
+  }
+  nav .conteudo {
+    height: 60px;
+    padding: 0 30px;
+  }
+  nav .conteudo a.logo img {
+    width: 100%;
+    max-width: 170px;
+  }
+  nav .conteudo .opcoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    height: calc(100dvh - 60px);
+    top: 59px;
+    left: 100dvw;
+    background-color: var(--cor-branco);
+    padding: 10px 30px 30px 30px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+    transition: all 0.5s;
+  }
+  nav .conteudo .opcoes.mostrar {
+    pointer-events: all;
+    left: 0;
+  }
+  nav .conteudo .opcoes a,
+  nav .conteudo .opcoes button {
+    margin: 20px 0 0 0;
+  }
+  nav .conteudo .opcoes .opcao button {
+    pointer-events: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+  }
+  nav .conteudo .opcoes .opcao button p {
+    font-family: var(--bold);
+  }
+  nav .conteudo .opcoes .opcao button img.setinha {
+    display: none;
+  }
+  nav .conteudo .opcoes .opcao button img.icone {
+    display: none;
+  }
+  nav .conteudo .opcoes a p,
+  nav .conteudo .opcoes button p {
+    font-size: var(--f2);
+  }
+  nav .conteudo .opcoes a img.icone,
+  nav .conteudo .opcoes button img.icone {
+    width: 18px;
+    max-width: 18px;
+  }
+  nav .conteudo .opcoes a.entrar {
+    margin-left: 0;
+  }
+  nav .conteudo .opcoes a.hospedar {
+    padding: 16px 20px;
+  }
+  nav .conteudo .opcoes .opcao .subOpcoes {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: scale(1);
+  }
+  nav .conteudo .opcoes .opcao .subOpcoes a {
+    margin: 0;
+    padding: 10px 0;
+  }
+  nav .conteudo button.menu {
+    display: flex;
+  }
+  nav .faixa {
+    top: 60px;
+    height: 50px;
+    background-color: var(--cor-escuro-1);
+    padding: 0 30px;
+  }
+  nav .faixa h3 {
+    line-height: 1.5;
+    max-width: 160px;
+  }
+  nav .faixa a {
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 15px;
+    max-width: 90px;
+  }
+  nav .faixa a p {
+    line-height: 1.5;
+    text-align: right;
+  }
+  nav .faixa a img {
+    width: 14px;
+    max-width: 14px;
+    margin: 0 0 0 10px;
+  }
+}

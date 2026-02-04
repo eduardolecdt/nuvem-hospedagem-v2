@@ -1,0 +1,183 @@
+/* 
+<section class="velocidade"> 
+*/
+section.velocidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--cor-branco);
+  overflow: hidden;
+}
+section.velocidade.animar .texto {
+  animation: textoVelocidade 1s ease-in-out;
+}
+@keyframes textoVelocidade {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 0);
+  }
+}
+section.velocidade .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 60px;
+}
+section.velocidade .texto .tag {
+  display: flex;
+  align-items: center;
+}
+section.velocidade .texto .tag img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 10px 0 0;
+}
+section.velocidade .texto .tag h3 {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-verde);
+}
+section.velocidade .texto .tag h3 span {
+  font-family: var(--semibold);
+}
+section.velocidade .texto h2 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-preto);
+  line-height: 1.3;
+  margin: 15px 0 0 0;
+  width: 100%;
+  max-width: 500px;
+}
+section.velocidade .texto h2 span {
+  color: var(--cor-ciano);
+}
+section.velocidade .texto p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+  width: 100%;
+  max-width: 650px;
+}
+section.velocidade .texto .detalhes {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 0 0;
+}
+section.velocidade .texto .detalhes .circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid #009B3A;
+  background-color: #ECFFF3;
+}
+section.velocidade .texto .detalhes .circulo img {
+  width: 100%;
+  max-width: 40px;
+}
+section.velocidade .texto .detalhes .parte {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 0 30px;
+}
+section.velocidade .texto .detalhes .parte .linha {
+  width: 70px;
+  height: 4px;
+  border-radius: 10px;
+}
+section.velocidade .texto .detalhes .parte.vermelho .linha {
+  background-color: #F52E52;
+}
+section.velocidade .texto .detalhes .parte.laranja .linha {
+  background-color: #FEB038;
+}
+section.velocidade .texto .detalhes .parte.verde .linha {
+  background-color: #009B3A;
+}
+section.velocidade .texto .detalhes .parte h3 {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  margin: 10px 0 0 0;
+}
+section.velocidade .texto .detalhes .parte.vermelho h3 {
+  color: #F52E52;
+}
+section.velocidade .texto .detalhes .parte.laranja h3 {
+  color: #FEB038;
+}
+section.velocidade .texto .detalhes .parte.verde h3 {
+  color: #009B3A;
+}
+section.velocidade.ativa .imagem img.nuvem {
+  animation-play-state: paused;
+}
+section.velocidade.ativa .imagem img.foguete {
+  animation-play-state: paused;
+}
+section.velocidade .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+section.velocidade .imagem .sombra {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(-90deg, #fff, #ffffff00);
+  background: -webkit-linear-gradient(-90deg, #fff, #ffffff00);
+  pointer-events: none;
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.velocidade {
+    flex-direction: column-reverse;
+  }
+  section.velocidade .texto {
+    padding: 60px 30px 30px 30px;
+  }
+  section.velocidade .texto .tag h3 {
+    font-size: var(--f1);
+  }
+  section.velocidade .texto h2 {
+    font-size: var(--f5);
+    max-width: 330px;
+  }
+  section.velocidade .texto p {
+    font-size: var(--f2);
+    max-width: 600px;
+  }
+  section.velocidade .texto .detalhes .circulo {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #009B3A;
+  }
+  section.velocidade .texto .detalhes .circulo img {
+    max-width: 30px;
+  }
+  section.velocidade .texto .detalhes .parte {
+    margin: 0 0 0 25px;
+  }
+  section.velocidade .texto .detalhes .parte .linha {
+    width: 60px;
+  }
+  section.velocidade .imagem video {
+    width: 100%;
+    max-width: 300px;
+  }
+  section.velocidade .imagem .sombra {
+    display: flex;
+  }
+}

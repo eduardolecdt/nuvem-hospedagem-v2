@@ -1,0 +1,25 @@
+RewriteEngine on
+
+
+# Redirecionar acessos sem "www" para a versão com "www"
+RewriteCond %{HTTP_HOST} ^nuvemhospedagem\.com\.br$ [NC]
+RewriteRule ^(.*)$ https://www.nuvemhospedagem.com.br/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^nuvemhospedagem\.com$
+RewriteRule ^/?$ "https\:\/\/www\.nuvemhospedagem\.com\.br\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^nuvemhospedagem\.net$
+RewriteRule ^/?$ "https\:\/\/www\.nuvemhospedagem\.com\.br\/" [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+ErrorDocument 404 /404/index.html
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php83” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php83 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

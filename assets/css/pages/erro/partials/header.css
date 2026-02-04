@@ -1,0 +1,10 @@
+/* <header> */
+
+header {
+  opacity: 1;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+}

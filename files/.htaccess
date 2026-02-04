@@ -1,0 +1,21 @@
+# Desabilitar listagem de diretórios
+Options -Indexes
+
+# Proteção adicional (exemplo): bloquear acesso ao arquivo .htaccess
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Ativar mod_rewrite
+RewriteEngine On
+
+# Se o pedido for para um diretório
+RewriteCond %{REQUEST_FILENAME} -d
+
+# E se dentro do diretório não existir index.php ou index.html
+RewriteCond %{REQUEST_FILENAME}/index.php !-f
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+
+# Então redireciona para o site principal
+RewriteRule ^.*$ https://nuvemhospedagem.com.br/ [R=301,L]

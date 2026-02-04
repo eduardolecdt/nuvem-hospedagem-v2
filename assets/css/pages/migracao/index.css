@@ -1,0 +1,14 @@
+/* Contato */
+
+@import '../../global/global.css';
+
+/* Elements */
+
+@import '../../elements/nav.css';
+@import '../../elements/footer.css'; 
+
+/* Partials */
+
+@import './partials/section-contato.css';
+@import './partials/section-depoimento.css';
+@import './partials/section-informacao.css';

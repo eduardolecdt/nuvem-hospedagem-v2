@@ -1,0 +1,13 @@
+/* Global */
+@import '../../global/global.css';
+
+/* Elementos */
+@import '../../elementos/nav.css';
+@import '../../elementos/footer.css';
+
+/* Sections */
+@import '../../sections/section-servidores.css';
+@import '../../sections/section-parceiros.css';
+@import '../../sections/section-modelamos.css';
+@import '../../sections/section-duvidas.css';
+@import '../../sections/section-migrar.css';

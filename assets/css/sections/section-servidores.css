@@ -1,0 +1,447 @@
+/* 
+<section class="servidores"> 
+*/
+section.servidores {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor-escuro-1);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 60px 60px 60px;
+}
+section.servidores.dois {
+  padding: 0;
+}
+section.servidores img.divisor {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+}
+section.servidores .mundo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  background-color: var(--cor-escuro-2);
+  border-radius: 10px;
+  min-height: 560px;
+  margin: 20px 0 0 0;
+}
+section.servidores.dois .mundo {
+  width: 100%;
+  margin: 0;
+  background-color: var(--cor-escuro-1);
+  border-radius: 0;
+  min-height: 660px;
+}
+section.servidores .mundo .seletor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  z-index: 4;
+}
+section.servidores .mundo .seletor h3 {
+  font-family: var(--semibold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  margin: 0 0 15px 0;
+}
+section.servidores .mundo .seletor .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 90px;
+  border-radius: 50px;
+  background-color: var(--cor-escuro-3);
+  border: 2px solid var(--cor-escuro-3);
+  position: relative;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+section.servidores .mundo .seletor .toggle:hover {
+  background-color: var(--cor-escuro-2);
+}
+section.servidores .mundo .seletor .toggle .parte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+section.servidores .mundo .seletor .toggle .parte p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+}
+section.servidores .mundo .seletor .toggle .parte img {
+  width: 100%;
+  max-width: 25px;
+  margin: 0 10px 0 0;
+}
+section.servidores .mundo .seletor .toggle span {
+  width: 150px;
+  height: 60px;
+  background-color: #ffffff22;
+  position: absolute;
+  left: 20px;
+  border-radius: 50px;
+  transition: all 0.6s;
+}
+section.servidores .mundo.ativo .seletor .toggle span {
+  left: 170px;
+}
+section.servidores .mundo .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 160px 40px 0 40px;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 3;
+  background: linear-gradient(180deg, #223142, #22314200);
+  background: -webkit-linear-gradient(180deg, #223142, #22314200);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.6s;
+}
+section.servidores .mundo .texto.eua {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+section.servidores .mundo.ativo .texto.brasil {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+section.servidores .mundo.ativo .texto.eua {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+section.servidores.dois .mundo .texto h2 {
+  max-width: 500px;
+}
+section.servidores .mundo .texto h2 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-branco);
+  line-height: 1.3;
+  width: 100%;
+  max-width: 320px;
+}
+section.servidores .mundo .texto.brasil h2 span {
+  color: var(--cor-ciano);
+}
+section.servidores .mundo .texto.eua h2 span {
+  color: var(--cor-vermelho);
+}
+section.servidores.dois .mundo .texto p {
+  max-width: 500px;
+}
+section.servidores .mundo .texto p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+}
+section.servidores .mundo .texto .item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 0 0;
+}
+section.servidores .mundo .texto .item img {
+  width: 100%;
+  max-width: 15px; 
+  margin: 0 10px 0 0;
+}
+section.servidores .mundo .texto .item h3 {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+}
+section.servidores .mundo .texto a {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-ciano);
+  padding: 10px 25px 10px 10px;
+  border-radius: 50px;
+  margin: 20px 0 0 0;
+  transition: all 0.3s;
+}
+section.servidores .mundo .texto a:hover {
+  filter: brightness(110%);
+}
+section.servidores .mundo .texto a h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+}
+section.servidores .mundo .texto a .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-branco);
+  margin: 0 10px 0 0;
+}
+section.servidores .mundo .texto a .icone img {
+  width: 100%;
+  max-width: 20px;
+}
+section.servidores .mundo img.mapa {
+  position: absolute;
+  z-index: 1;
+  width: 2300px;
+  min-width: 2300px;
+  bottom: -100px;
+  left: -450px;
+  transition: all 0.6s;
+  animation: mapaServidores 3s linear infinite;
+}
+@keyframes mapaServidores {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(120%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+section.servidores .mundo.ativo img.mapa {
+  width: 1500px;
+  min-width: 1500px;
+  bottom: 0;
+  left: -150px;
+}
+section.servidores .mundo img.caminhos {
+  position: absolute;
+  z-index: 2;
+  transition: all 0.6s;
+}
+section.servidores .mundo.ativo img.caminhos.eua {
+  opacity: 1;
+  visibility: visible;
+}
+section.servidores .mundo.ativo img.caminhos.brasil {
+  opacity: 0;
+  visibility: hidden;
+}
+section.servidores .mundo img.caminhos.brasil {
+  width: 200px;
+  left: 200px;
+  bottom: 100px;
+  opacity: 1;
+  visibility: visible;
+}
+section.servidores .mundo img.caminhos.eua {
+  width: 280px;
+  left: 110px;
+  bottom: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+section.servidores .quadros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  padding: 0 0 0 20px;
+}
+section.servidores .quadros .quadro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  height: 100%;
+  background-color: var(--cor-escuro-2);
+  border-radius: 10px;
+  margin: 20px 0 0 0;
+}
+section.servidores .quadros .quadro .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: var(--cor-escuro-3);
+}
+section.servidores .quadros .quadro .icone img {
+  width: 100%;
+  max-width: 30px;
+}
+section.servidores .quadros .quadro p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  padding: 0 0 0 20px;
+}
+section.servidores .quadros .quadro p span {
+  font-family: var(--semibold);
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.servidores {
+    flex-direction: column;
+    padding: 70px 30px 60px 30px;
+  }
+  section.servidores img.divisor {
+    left: -10%;
+    width: 120%;
+  }
+  section.servidores .mundo {
+    width: 100%;
+    min-height: 600px;
+    margin: 0;
+  }
+  section.servidores.dois .mundo .seletor {
+    top: 50px;
+  }
+  section.servidores.dois .mundo {
+    min-height: 800px;
+  }
+  section.servidores .mundo .seletor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 4;
+  }
+  section.servidores .mundo .seletor h3 {
+    font-size: var(--f2);
+    margin: 0 0 10px 0;
+  }
+  section.servidores .mundo .seletor .toggle {
+    width: 280px;
+    height: 70px;
+    padding: 0 10px;
+    border-radius: 15px;
+  }
+  section.servidores .mundo .seletor .toggle .parte p {
+    font-size: var(--f2);
+  }
+  section.servidores .mundo .seletor .toggle .parte img {
+    max-width: 20px;
+  }
+  section.servidores .mundo .seletor .toggle span {
+    width: 130px;
+    height: 50px;
+    left: 10px;
+    border-radius: 10px;
+  }
+  section.servidores .mundo.ativo .seletor .toggle span {
+    left: 140px;
+  }
+  section.servidores .mundo .texto {
+    padding: 120px 30px 0 30px;
+    width: auto;
+    min-width: 345px;
+    right: auto;
+    left: 0;
+    height: 400px;
+    border-radius: 0 0 10px 0;
+    background: linear-gradient(-90deg, #223142, #22314200);
+    background: -webkit-linear-gradient(-90deg, #223142, #22314200);
+    border-right: 1px solid #ffffff1e;
+    border-bottom: 1px solid #ffffff1e;
+  }
+  section.servidores.dois .mundo .texto {
+    height: 450px;
+    padding: 120px 30px 0 30px;
+    min-width: 100%;
+  }
+  section.servidores .mundo .texto h2 {
+    font-size: var(--f3);
+  }
+  section.servidores.dois .mundo .texto h2 {
+    max-width: 250px;
+  }
+  section.servidores .mundo .texto p {
+    margin: 5px 0 0 0;
+    width: 100%;
+    max-width: 260px;
+  }
+  section.servidores .mundo .texto .item {
+    margin: 15px 0 0 0;
+  }
+  section.servidores .mundo .texto .item img {
+    max-width: 13px; 
+  }
+  section.servidores .mundo .texto a {
+    padding: 10px 35px 10px 10px;
+    margin: 20px 0 0 0;
+  }
+  section.servidores .mundo .texto a h3 {
+    font-size: var(--f2);
+  }
+  section.servidores .mundo img.mapa {
+    width: 1500px;
+    min-width: 1500px;
+    bottom: -50px;
+    left: -250px;
+  }
+  section.servidores .mundo.ativo img.mapa {
+    width: 800px;
+    min-width: 800px;
+    bottom: -50px;
+    left: -30px;
+  }
+  section.servidores .mundo img.caminhos.brasil {
+    width: 130px;
+    left: 175px;
+    bottom: 80px;
+  }
+  section.servidores .mundo img.caminhos.eua {
+    width: 160px;
+    left: 110px;
+    bottom: 10px;
+  }
+  section.servidores .quadros {
+    width: 100%;
+    padding: 0;
+  }
+  section.servidores .quadros .quadro {
+    padding: 15px;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  section.servidores .quadros .quadro .icone {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+  }
+  section.servidores .quadros .quadro .icone img {
+    width: 100%;
+    max-width: 25px;
+  }
+  section.servidores .quadros .quadro p {
+    font-size: var(--f2);
+    padding: 0 0 0 15px;
+  }
+}

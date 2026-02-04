@@ -1,0 +1,14 @@
+.whatsapp-float {
+  position: fixed;
+  bottom: 65px;       /* Distância do fundo da página */
+  right: 20px;        /* Distância da direita da página */
+  z-index: 1000;      /* Certifique-se que o botão fique acima de outros elementos */
+  width: 50px;        /* Largura do botão */
+  height: 50px;       /* Altura do botão */
+  border-radius: 50%; /* Se você quiser o botão redondo */
+}
+
+.whatsapp-float img {
+  width: 100%;        /* Faz a imagem ocupar 100% do tamanho do botão */
+  height: auto;       /* Mantém a proporção da imagem */
+}

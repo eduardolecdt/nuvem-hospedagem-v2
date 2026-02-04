@@ -1,0 +1,530 @@
+/* 
+<section class="configuracoes"> 
+*/
+section.configuracoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(90deg, var(--degrade-claro));
+  background: -webkit-linear-gradient(90deg, var(--degrade-claro));
+}
+section.configuracoes.dois {
+  background: linear-gradient(-90deg, var(--degrade-claro));
+  background: -webkit-linear-gradient(-90deg, var(--degrade-claro));
+}
+section.configuracoes .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px;
+  width: 50%;
+}
+section.configuracoes.dois .texto {
+  padding: 60px 60px 60px 0;
+}
+section.configuracoes .texto h2 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-preto);
+  line-height: 1.3;
+  width: 100%;
+  max-width: 600px;
+}
+section.configuracoes.dois .texto h2 {
+  margin: 0 0 10px 0;
+}
+section.configuracoes .texto h2 span {
+  color: var(--cor-ciano);
+}
+section.configuracoes .texto p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  max-width: 600px;
+}
+section.configuracoes.dois .texto p {
+  max-width: 500px;
+}
+section.configuracoes .texto .duvida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: var(--cor-branco);
+  border-radius: 10px;
+  border: 1px solid #0e0e101b;
+  width: 100%;
+  margin: 10px 0 0 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+section.configuracoes .texto .duvida:hover {
+  border: 1px solid var(--cor-ciano);
+}
+section.configuracoes .texto .duvida .nome {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+section.configuracoes .texto .duvida .nome img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 10px 0 0;
+}
+section.configuracoes .texto .duvida .nome h3 {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  line-height: 1.5;
+}
+section.configuracoes .texto .duvida .conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+section.configuracoes .texto .duvida .conteudo h4 {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-preto);
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0 0 0 0;
+  transition: all 0.5s;
+}
+section.configuracoes .texto .duvida .conteudo h5 {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+section.configuracoes .texto .duvida.ativo .conteudo h4 {
+  line-height: 1.5;
+  opacity: 1;
+  visibility: visible;
+  margin: 15px 0 5px 0;
+}
+section.configuracoes .texto .duvida.ativo .conteudo h5 {
+  line-height: 1.5;
+  opacity: 1;
+  visibility: visible;
+}
+section.configuracoes .fundadores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+section.configuracoes .fundadores .quadro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 20px;
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--cor-branco);
+  box-shadow: 10px 10px 30px 0 #1f1d290e;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+section.configuracoes .fundadores  .quadro img {
+  width: 100%;
+  max-width: 130px;
+  border-radius: 50%;
+  border: 1px solid var(--cor-ciano);
+  animation: quadroduvidas 20s linear infinite;
+}
+section.configuracoes .fundadores .quadro .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 0 20px;
+}
+section.configuracoes .fundadores .quadro h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  margin: 0 0 5px 0;
+}
+section.configuracoes .fundadores .quadro h4 {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-preto);
+}
+section.configuracoes .fundadores .quadro a {
+  display: flex;
+  align-items: center;
+  font-family: var(--bold);
+  font-size: var(--f1);
+  color: var(--cor-branco);
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: var(--cor-musgo);
+  margin: 10px 0 0 0;
+  transition: all 0.3s;
+}
+section.configuracoes .fundadores .quadro a:hover {
+  background-color: var(--cor-verde);
+}
+section.configuracoes .fundadores .quadro a img {
+  border-radius: 0;
+  width: 20px;
+  max-width: 20px;
+  margin: 0 10px 0 0;
+  border: none;
+}
+section.configuracoes.animar .fundadores {
+  animation: imagemDuvidas 1s ease-in-out;
+}
+@keyframes imagemDuvidas {
+  0% {
+    opacity: 0;
+  }
+}
+section.configuracoes.animar .imagem {
+  animation: imagemDuvidas 1s ease-in-out;
+}
+@keyframes imagemDuvidas {
+  0% {
+    opacity: 0;
+  }
+}
+section.configuracoes .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+}
+section.configuracoes .imagem.tres img.homem {
+  max-width: 190px;
+}
+section.configuracoes .imagem.dois img.homem {
+  max-width: 250px;
+  animation: homemApresentacaoDois 4s ease-in-out infinite;
+}
+section.configuracoes .imagem.dois img.homem.dois {
+  margin: 0 0 0 20px;
+  animation: homemApresentacaoDoisDois 4s ease-in-out infinite;
+}
+section.configuracoes .imagem img.homem {
+  width: 100%;
+  max-width: 500px;
+  z-index: 2;
+  animation: homemApresentacao 4s ease-in-out infinite;
+}
+@keyframes homemApresentacao {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(-50px, 0);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes homemApresentacaoDois {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(0, 30px);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes homemApresentacaoDoisDois {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(0, -30px);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+section.configuracoes .imagem.tres img.nuvem {
+  max-width: 450px;
+}
+section.configuracoes .imagem img.nuvem {
+  width: 100%;
+  max-width: 650px;
+  position: absolute;
+  z-index: 1;
+  animation: nuvemduvidas 55s linear infinite;
+}
+@keyframes nuvemduvidas {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+section.configuracoes .imagem .quadro {
+  position: absolute;
+  background-color: #ffffff50;
+  border: 2px solid var(--cor-branco);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 4;
+}
+section.configuracoes .imagem .quadro img {
+  width: 100%;
+  max-width: 250px;
+  animation: quadroduvidas 2s linear infinite;
+}
+@keyframes quadroduvidas {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(130%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+section.configuracoes.dois .imagem .quadro.um {
+  top: 20px;
+  right: 20px;
+}
+section.configuracoes.dois .imagem .quadro.dois {
+  bottom: 20px;
+  right: 20px;
+}
+section.configuracoes .imagem.dois .quadro.um {
+  top: -80px;
+}
+section.configuracoes .imagem.dois .quadro.dois {
+  bottom: -80px;
+}
+section.configuracoes .imagem .quadro.um {
+  top: 0;
+  left: 5%;
+}
+section.configuracoes .imagem .quadro.dois {
+  bottom: 5%;
+  right: 60px;
+}
+section.configuracoes .imagem img.wordpress {
+  width: 100%;
+  max-width: 40px;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  animation: iconeImagemduvidasWordpress 4s ease-in-out infinite;
+}
+section.configuracoes .imagem img.elementor {
+  width: 100%;
+  max-width: 40px;
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  animation: iconeImagemduvidasElementor 4s ease-in-out infinite;
+}
+section.configuracoes .imagem img.foguete {
+  width: 100%;
+  max-width: 40px;
+  position: absolute;
+  right: 25%;
+  bottom: 35%;
+  animation: iconeImagemduvidasFoguete 4s ease-in-out infinite;
+}
+@keyframes iconeImagemduvidasWordpress {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(20px, 0);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes iconeImagemduvidasElementor {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(0, 20px);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes iconeImagemduvidasFoguete {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(0, -20px);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.configuracoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section.configuracoes .texto {
+    align-items: center;
+    padding: 0 30px 40px 30px;
+    width: 100%;
+  }
+  section.configuracoes.dois .texto {
+    padding: 30px 30px 40px 30px;
+  }
+  section.configuracoes .texto h2 {
+    font-size: var(--f5);
+    text-align: center;
+  }
+  section.configuracoes .texto p {
+    font-size: var(--f2);
+    text-align: center;
+    max-width: 350px;
+  }
+  section.configuracoes .texto .duvida {
+    padding: 25px;
+  }
+  section.configuracoes .texto .duvida .nome img {
+    max-width: 12px;
+  }
+  section.configuracoes .fundadores {
+    padding: 40px 30px 0 30px;
+    width: 100%;
+  }
+  section.configuracoes .fundadores .quadro {
+    margin: 5px 0;
+  }
+  section.configuracoes .fundadores  .quadro img {
+    max-width: 80px;
+  }
+  section.configuracoes .fundadores .quadro .info {
+    padding: 0 0 0 15px;
+  }
+  section.configuracoes .fundadores .quadro a {
+    padding: 8px 15px;
+  }
+  section.configuracoes .fundadores .quadro a img {
+    width: 15px;
+    max-width: 15px;
+  }
+  section.configuracoes .imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 80px 0 70px 0;
+    position: relative;
+  }
+  section.configuracoes .imagem.tres {
+    padding: 0 0 40px 0;
+  }
+  section.configuracoes .imagem.dois img.homem {
+    max-width: 150px;
+  }
+  section.configuracoes .imagem.dois img.homem.dois {
+    margin: 0 0 0 10px;
+  }
+  section.configuracoes .imagem.tres img.homem {
+    max-width: 130px;
+  }
+  section.configuracoes .imagem img.homem {
+    max-width: 300px;
+  }
+  @keyframes homemApresentacao {
+    0% {
+      filter: brightness(100%);
+      transform: translate(0, 0);
+    }
+    50% {
+      filter: brightness(110%);
+      transform: translate(-30px, 0);
+    }
+    100% {
+      filter: brightness(100%);
+      transform: translate(0, 0);
+    }
+  }
+  section.configuracoes .imagem.tres img.nuvem {
+    max-width: 300px;
+  }
+  section.configuracoes .imagem img.nuvem {
+    max-width: 350px;
+  }
+  section.configuracoes .imagem.dois .quadro.um {
+    top: 30px;
+  }
+  section.configuracoes .imagem.dois .quadro.dois {
+    bottom: 30px;
+  }
+  section.configuracoes .imagem .quadro {
+    background-color: #ffffff87;
+    padding: 15px 20px;
+  }
+  section.configuracoes .imagem .quadro img {
+    max-width: 120px;
+  }
+  section.configuracoes .imagem .quadro.um {
+    top: 0;
+    left: 30px;
+  }
+  section.configuracoes .imagem .quadro.dois {
+    bottom: 50px;
+    right: 30px;
+  }
+  section.configuracoes .imagem img.wordpress {
+    max-width: 30px;
+  }
+  section.configuracoes .imagem img.elementor {
+    max-width: 30px;
+  }
+  section.configuracoes .imagem img.foguete {
+    max-width: 30px;
+  }
+}

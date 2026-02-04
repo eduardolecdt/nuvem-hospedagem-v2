@@ -1,0 +1,175 @@
+/* 
+<section class="modelamos"> 
+*/
+section.modelamos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 60px 30px 60px;
+  background: linear-gradient(90deg, var(--degrade-claro));
+  background: -webkit-linear-gradient(90deg, var(--degrade-claro));
+  overflow: hidden;
+}
+section.modelamos.dois {
+  padding: 60px;
+}
+section.modelamos .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+section.modelamos .titulo h2 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-preto);
+  line-height: 1.3;
+}
+section.modelamos .titulo h2 span {
+  color: var(--cor-ciano);
+}
+section.modelamos .titulo p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 5px 0 20px 0;
+}
+section.modelamos .titulo .linha {
+  width: 100%;
+  max-width: 500px;
+  height: 2px;
+  background-color: #0e092724;
+}
+section.modelamos .quadros {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+section.modelamos.animar .quadros .quadro {
+  animation: quadroModelamos 1s ease-in-out;
+}
+@keyframes quadroModelamos {
+  0% {
+    opacity: 0;
+  }
+}
+section.modelamos .quadros .quadro {
+  display: flex;
+  align-items: flex-start;
+  width: calc(33.33% - 10px);
+  background-color: var(--cor-branco);
+  padding: 30px;
+  box-shadow: 0 5px 30px 0 #0906200c;
+  border-radius: 10px;
+}
+section.modelamos .quadros .quadro .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+section.modelamos .quadros .quadro .icone img {
+  width: 100%;
+  max-width: 25px;
+}
+section.modelamos .quadros .quadro .icone.um {
+  background-color: #F5E8FF;
+}
+section.modelamos .quadros .quadro .icone.dois {
+  background-color: #F8FFCA;
+}
+section.modelamos .quadros .quadro .icone.tres {
+  background-color: #D8FFE5;
+}
+section.modelamos .quadros .quadro .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 0 20px;
+}
+section.modelamos .quadros .quadro .texto h3 {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+}
+section.modelamos .quadros .quadro .texto span {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  background-color: var(--cor-ciano);
+  margin: 0 10px 0 0;
+}
+section.modelamos .quadros .quadro .texto h4 {
+  display: flex;
+  align-items: center;
+  font-family: var(--semibold);
+  font-size: var(--f1);
+  color: var(--cor-ciano);
+  margin: 10px 0 0 0;
+}
+section.modelamos .quadros .quadro .texto p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 5px 0 0 0;
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.modelamos {
+    padding: 50px 30px;
+  }
+  section.modelamos.dois {
+    padding: 50px 30px;
+  }
+  section.modelamos .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 30px 0;
+  }
+  section.modelamos .titulo h2 {
+    font-size: var(--f5);
+    width: 100%;
+    max-width: 300px;
+  }
+  section.modelamos .titulo p {
+    font-size: var(--f2);
+    width: 100%;
+    max-width: 330px;
+  }
+  section.modelamos .titulo .linha {
+    max-width: 190px;
+  }
+  section.modelamos .quadros {
+    flex-direction: column;
+  }
+  section.modelamos .quadros .quadro {
+    width: 100%;
+    padding: 25px;
+    margin: 0 0 20px 0;
+  }
+  section.modelamos .quadros .quadro .icone {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+  }
+  section.modelamos .quadros .quadro .icone img {
+    max-width: 22px;
+  }
+  section.modelamos .quadros .quadro .texto {
+    padding: 0 0 0 15px;
+  }
+}
