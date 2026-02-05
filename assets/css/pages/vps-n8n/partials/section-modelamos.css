@@ -1,0 +1,111 @@
+/*
+VPS N8N - Section Modelamos (Liberdade)
+<section class="modelamos">
+VPS n8n: feita para quem precisa automatizar com liberdade
+*/
+
+/* Titulo */
+section.modelamos .titulo {
+  padding: 0 0 40px 0;
+}
+section.modelamos .titulo h2 {
+  max-width: 700px;
+}
+section.modelamos .titulo p {
+  max-width: 800px;
+  margin: 10px 0 25px 0;
+}
+
+/* Layout 4 quadros com cards verticais */
+section.modelamos .quadros {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+}
+section.modelamos .quadros .quadro {
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 24px 36px 24px;
+  border-radius: 20px;
+  box-shadow:
+    0 2px 4px rgba(9, 6, 32, 0.03),
+    0 12px 32px rgba(9, 6, 32, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+section.modelamos .quadros .quadro .icone {
+  width: 72px;
+  min-width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  margin: 0 0 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+section.modelamos .quadros .quadro .icone img {
+  max-width: 32px;
+  max-height: 32px;
+}
+section.modelamos .quadros .quadro .icone.um {
+  background: linear-gradient(145deg, #E8F4FF 0%, #D0E8FF 100%);
+}
+section.modelamos .quadros .quadro .icone.dois {
+  background: linear-gradient(145deg, #E0FAFF 0%, #B8ECFF 100%);
+}
+section.modelamos .quadros .quadro .icone.tres {
+  background: linear-gradient(145deg, #F5EEFF 0%, #E4D6FF 100%);
+}
+section.modelamos .quadros .quadro .icone.quatro {
+  background: linear-gradient(145deg, #E0FFF5 0%, #B0F0DC 100%);
+}
+section.modelamos .quadros .quadro .texto {
+  padding: 0;
+}
+section.modelamos .quadros .quadro .texto h3 {
+  font-size: var(--f2);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--cor-preto);
+}
+
+/* Responsivo */
+@media screen and (max-width: 1100px) {
+  section.modelamos .quadros {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  section.modelamos .quadros .quadro {
+    width: calc(50% - 10px);
+    padding: 32px 20px 28px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.modelamos .titulo {
+    padding: 0 0 30px 0;
+  }
+  section.modelamos .quadros {
+    gap: 16px;
+  }
+  section.modelamos .quadros .quadro {
+    width: 100%;
+    flex-direction: row;
+    text-align: left;
+    padding: 24px;
+    border-radius: 16px;
+  }
+  section.modelamos .quadros .quadro .icone {
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+    margin: 0;
+    border-radius: 14px;
+  }
+  section.modelamos .quadros .quadro .icone img {
+    max-width: 26px;
+    max-height: 26px;
+  }
+  section.modelamos .quadros .quadro .texto {
+    padding: 0 0 0 16px;
+  }
+}

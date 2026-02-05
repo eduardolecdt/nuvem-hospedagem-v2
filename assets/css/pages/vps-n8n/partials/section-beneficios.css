@@ -1,0 +1,174 @@
+section.beneficios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 140px 60px 60px 60px;
+  background: linear-gradient(90deg, var(--degrade-claro));
+  background: -webkit-linear-gradient(90deg, var(--degrade-claro));
+  overflow: hidden;
+  position: relative;
+}
+section.beneficios.dois {
+  background: linear-gradient(-90deg, var(--degrade-claro));
+  background: -webkit-linear-gradient(-90deg, var(--degrade-claro));
+}
+section.beneficios img.divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+section.beneficios .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+section.beneficios .titulo h2 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-preto);
+  line-height: 1.3;
+}
+section.beneficios .titulo h2 span {
+  color: var(--cor-ciano);
+}
+section.beneficios .titulo p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  max-width: 850px;
+}
+section.beneficios.animar .quadros {
+  animation: quadrosBeneficios 1s ease-in-out;
+}
+@keyframes quadrosBeneficios {
+  0% {
+    transform: translate(0, 50px);
+  }
+}
+section.beneficios .quadros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+section.beneficios .quadros .quadro {
+  display: flex;
+  width: calc(25% - 10px);
+  margin: 20px 0 0 0;
+  background-color: var(--cor-branco);
+  box-shadow: 0 5px 30px 0 #0906200c;
+  padding: 60px 0 0 0;
+  position: relative;
+  border-radius: 10px;
+}
+section.beneficios .quadros .quadro .icone {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 30px;
+  width: 100%;
+  min-width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #eefeff;
+  top: 0;
+  left: 0;
+}
+section.beneficios .quadros .quadro .icone img {
+  width: 100%;
+  max-width: 25px;
+}
+section.beneficios .quadros .quadro .icone.um {
+  background-color: #8fd13a20;
+}
+section.beneficios .quadros .quadro .icone.dois {
+  background-color: #5e8cda20;
+}
+section.beneficios .quadros .quadro .icone.tres {
+  background-color: #009b3b20;
+}
+section.beneficios .quadros .quadro .icone.quatro {
+  background-color: #31bf6220;
+}
+section.beneficios .quadros .quadro .icone.cinco {
+  background-color: #e0e3ff;
+}
+section.beneficios .quadros .quadro .icone.seis {
+  background-color: #fefdca;
+}
+section.beneficios .quadros .quadro .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+section.beneficios .quadros .quadro .texto h3 {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+}
+section.beneficios .quadros .quadro .texto p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 5px 0 0 0;
+}
+@media screen and (max-width: 1000px) {
+  section.beneficios {
+    padding: 80px 30px 50px 30px;
+  }
+  section.beneficios .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 30px 0;
+  }
+  section.beneficios .titulo h2 {
+    font-size: var(--f5);
+    width: 100%;
+    max-width: 300px;
+  }
+  section.beneficios .titulo p {
+    font-size: var(--f2);
+    width: 100%;
+    max-width: 330px;
+  }
+  section.beneficios .titulo .linha {
+    max-width: 190px;
+  }
+  section.beneficios .quadros {
+    flex-direction: column;
+  }
+  section.beneficios .quadros .quadro {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 50px;
+  }
+  section.beneficios .quadros .quadro .icone {
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    min-width: 50px;
+    padding: 0;
+  }
+  section.beneficios .quadros .quadro .icone img {
+    max-width: 22px;
+  }
+  section.beneficios .quadros .quadro .texto {
+    padding: 25px;
+  }
+}

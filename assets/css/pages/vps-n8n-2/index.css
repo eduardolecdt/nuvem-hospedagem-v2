@@ -1,0 +1,15 @@
+@import "../../global/global.css";
+
+@import "../../elementos/nav.css";
+@import "../../elementos/footer.css";
+
+@import "../../sections/section-planos.css";
+
+@import "./partials/section-apresentacao.css";
+@import "./partials/section-beneficios.css";
+@import "./partials/section-planos.css";
+@import "./partials/section-n8n-flow.css";
+@import "./partials/section-workflows.css";
+@import "./partials/section-servidores.css";
+@import "./partials/section-duvidas.css";
+@import "./partials/section-migrar.css";
