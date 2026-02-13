@@ -237,26 +237,29 @@ section.n8n-flow .nodes .connection.three::before {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  section.n8n-flow .nodes {
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
+@keyframes n8nDataFlowVertical {
+  0% {
+    top: 0;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
   }
-  section.n8n-flow .nodes .connection {
-    display: none;
+  15% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
   }
-  section.n8n-flow .nodes .node {
-    flex: 0 0 calc(50% - 8px);
-    max-width: calc(50% - 8px);
+  85% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
   }
-  section.n8n-flow .nodes .node .connector {
-    display: none;
+  100% {
+    top: calc(100% - 10px);
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
   }
 }
 @media screen and (max-width: 1000px) {
   section.n8n-flow {
-    padding: 100px 30px 50px 30px;
+    padding: 80px 20px 40px 20px;
   }
   section.n8n-flow img.divisor {
     left: -10%;
@@ -284,9 +287,24 @@ section.n8n-flow .nodes .connection.three::before {
   section.n8n-flow .nodes .node {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
     height: auto;
     min-height: 80px;
+    padding: 14px 16px;
+  }
+  section.n8n-flow .nodes .node .icone {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+  section.n8n-flow .nodes .node .icone img {
+    max-width: 20px;
+  }
+  section.n8n-flow .nodes .node .texto {
+    padding: 0 0 0 12px;
+  }
+  section.n8n-flow .nodes .node .texto h3 {
+    font-size: 12px;
   }
   section.n8n-flow .nodes .connection {
     display: block;
@@ -336,48 +354,5 @@ section.n8n-flow .nodes .connection.three::before {
   section.n8n-flow .nodes .node.success {
     border-right-width: 2px;
     border-bottom-width: 4px;
-  }
-}
-@keyframes n8nDataFlowVertical {
-  0% {
-    top: 0;
-    opacity: 0;
-    transform: translateX(-50%) scale(0.8);
-  }
-  15% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-  85% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-  100% {
-    top: calc(100% - 10px);
-    opacity: 0;
-    transform: translateX(-50%) scale(0.8);
-  }
-}
-@media screen and (max-width: 600px) {
-  section.n8n-flow {
-    padding: 80px 20px 40px 20px;
-  }
-  section.n8n-flow .nodes .node {
-    max-width: 100%;
-    padding: 14px 16px;
-  }
-  section.n8n-flow .nodes .node .icone {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-  }
-  section.n8n-flow .nodes .node .icone img {
-    max-width: 20px;
-  }
-  section.n8n-flow .nodes .node .texto {
-    padding: 0 0 0 12px;
-  }
-  section.n8n-flow .nodes .node .texto h3 {
-    font-size: 12px;
   }
 }

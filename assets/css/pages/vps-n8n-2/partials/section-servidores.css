@@ -1,3 +1,9 @@
+/*
+VPS N8N - Section Servidores (Infraestrutura)
+<section class="servidores">
+MODO CLARO
+*/
+
 section.servidores {
   display: flex;
   flex-direction: column;
@@ -5,12 +11,12 @@ section.servidores {
   justify-content: center;
   width: 100%;
   padding: 80px 60px;
-  background: linear-gradient(90deg, var(--degrade-claro));
-  background: -webkit-linear-gradient(90deg, var(--degrade-claro));
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
   position: relative;
   overflow: hidden;
 }
 
+/* Titulo */
 section.servidores .titulo {
   display: flex;
   flex-direction: column;
@@ -35,12 +41,13 @@ section.servidores .titulo h2 span {
 section.servidores .titulo p {
   font-family: var(--light);
   font-size: var(--f3);
-  color: #525252;
+  color: rgba(0, 0, 0, 0.6);
   line-height: 1.6;
   margin: 12px 0 0 0;
   max-width: 650px;
 }
 
+/* Conteudo */
 section.servidores .conteudo {
   display: flex;
   align-items: stretch;
@@ -51,6 +58,7 @@ section.servidores .conteudo {
   z-index: 2;
 }
 
+/* Imagem com efeito */
 section.servidores .conteudo .imagem {
   display: flex;
   align-items: center;
@@ -58,35 +66,19 @@ section.servidores .conteudo .imagem {
   width: 50%;
   position: relative;
   min-height: 450px;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(237, 246, 253, 0.6) 100%
-  );
+  background-image: url("../../../../files/images/datacenter.webp");
+  background-size: cover;
+  background-position: center;
   border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   overflow: hidden;
-}
-section.servidores .conteudo .imagem .n8n-server-svg {
-  width: 180px;
-  height: 180px;
-  z-index: 3;
-  position: relative;
-  animation: n8nServerFloat 5s ease-in-out infinite;
-}
-@keyframes n8nServerFloat {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(3deg);
-  }
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
+/* Círculo orbital */
 section.servidores .conteudo .imagem .orbit-ring {
   position: absolute;
-  border: 1px dashed rgba(45, 201, 212, 0.3);
+  border: 1px dashed rgba(45, 201, 212, 0.5);
   border-radius: 50%;
   animation: orbitSpin 20s linear infinite;
   z-index: 2;
@@ -101,7 +93,7 @@ section.servidores .conteudo .imagem .orbit-ring.two {
   height: 280px;
   animation-duration: 25s;
   animation-direction: reverse;
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(45, 201, 212, 0.3);
 }
 section.servidores .conteudo .imagem .orbit-ring::after {
   content: "";
@@ -115,7 +107,7 @@ section.servidores .conteudo .imagem .orbit-ring::after {
   transform: translateX(-50%);
 }
 section.servidores .conteudo .imagem .orbit-ring.two::after {
-  background: #525252;
+  background: var(--cor-ciano);
   width: 6px;
   height: 6px;
   top: auto;
@@ -130,60 +122,7 @@ section.servidores .conteudo .imagem .orbit-ring.two::after {
   }
 }
 
-section.servidores .conteudo .imagem .neon-uptime {
-  position: absolute;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  z-index: 1;
-  pointer-events: none;
-}
-section.servidores .conteudo .imagem .neon-uptime .numero {
-  font-family: var(--bold);
-  font-size: 160px;
-  line-height: 1;
-  letter-spacing: -0.05em;
-  color: rgba(45, 201, 212, 0.08);
-  position: relative;
-}
-section.servidores .conteudo .imagem .neon-uptime .numero::before {
-  content: "99.98";
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: var(--cor-ciano);
-  opacity: 0.25;
-  clip-path: inset(0 100% 0 0);
-  animation: fillNumber 3s ease-in-out infinite;
-}
-@keyframes fillNumber {
-  0%,
-  100% {
-    clip-path: inset(0 100% 0 0);
-    opacity: 0.15;
-  }
-  50% {
-    clip-path: inset(0 0 0 0);
-    opacity: 0.3;
-  }
-}
-section.servidores .conteudo .imagem .neon-uptime .percent {
-  font-family: var(--bold);
-  font-size: 70px;
-  line-height: 1;
-  color: rgba(45, 201, 212, 0.08);
-  animation: percentPulse 3s ease-in-out infinite;
-}
-@keyframes percentPulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
+/* Linha de scan horizontal */
 section.servidores .conteudo .imagem .scan-line {
   position: absolute;
   width: 100%;
@@ -194,7 +133,7 @@ section.servidores .conteudo .imagem .scan-line {
     var(--cor-ciano),
     transparent
   );
-  opacity: 0.4;
+  opacity: 0.6;
   animation: scanMove 4s ease-in-out infinite;
   z-index: 5;
   pointer-events: none;
@@ -206,10 +145,10 @@ section.servidores .conteudo .imagem .scan-line {
     opacity: 0;
   }
   10% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
   90% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
   100% {
     top: 90%;
@@ -217,6 +156,7 @@ section.servidores .conteudo .imagem .scan-line {
   }
 }
 
+/* Partículas de dados fluindo */
 section.servidores .conteudo .imagem .data-particle {
   position: absolute;
   width: 4px;
@@ -290,6 +230,7 @@ section.servidores .conteudo .imagem .data-particle.three {
   }
 }
 
+/* Tag de uptime */
 section.servidores .conteudo .imagem .tag {
   position: absolute;
   bottom: 30px;
@@ -300,9 +241,12 @@ section.servidores .conteudo .imagem .tag {
   align-items: center;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(45, 201, 212, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 12px 24px;
   border-radius: 12px;
   z-index: 4;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 section.servidores .conteudo .imagem .tag h3 {
   font-family: var(--bold);
@@ -313,12 +257,13 @@ section.servidores .conteudo .imagem .tag h3 {
 section.servidores .conteudo .imagem .tag p {
   font-family: var(--light);
   font-size: var(--f1);
-  color: #525252;
+  color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 4px 0 0 0;
 }
 
+/* Quadros */
 section.servidores .conteudo .quadros {
   display: flex;
   flex-direction: column;
@@ -330,13 +275,15 @@ section.servidores .conteudo .quadros .quadro {
   display: flex;
   align-items: center;
   padding: 24px 28px;
-  background-color: var(--cor-branco);
+  background: var(--cor-branco);
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 }
 section.servidores .conteudo .quadros .quadro:hover {
   border-color: rgba(45, 201, 212, 0.3);
+  box-shadow: 0 4px 16px rgba(45, 201, 212, 0.1);
 }
 section.servidores .conteudo .quadros .quadro .icone {
   display: flex;
@@ -346,11 +293,7 @@ section.servidores .conteudo .quadros .quadro .icone {
   min-width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: linear-gradient(
-    145deg,
-    rgba(45, 201, 212, 0.15) 0%,
-    rgba(45, 201, 212, 0.05) 100%
-  );
+  background: linear-gradient(145deg, #e0faff 0%, #b8ecff 100%);
   border: 1px solid rgba(45, 201, 212, 0.2);
 }
 section.servidores .conteudo .quadros .quadro .icone img {
@@ -373,10 +316,11 @@ section.servidores .conteudo .quadros .quadro .texto h3 {
 section.servidores .conteudo .quadros .quadro .texto p {
   font-family: var(--light);
   font-size: var(--f2);
-  color: #525252;
+  color: rgba(0, 0, 0, 0.6);
   line-height: 1.5;
 }
 
+/* Responsivo */
 @media screen and (max-width: 1000px) {
   section.servidores {
     padding: 60px 30px;
@@ -401,10 +345,6 @@ section.servidores .conteudo .quadros .quadro .texto p {
     min-height: 350px;
     border-radius: 20px;
   }
-  section.servidores .conteudo .imagem .n8n-server-svg {
-    width: 120px;
-    height: 120px;
-  }
   section.servidores .conteudo .imagem .orbit-ring.one {
     width: 160px;
     height: 160px;
@@ -412,15 +352,6 @@ section.servidores .conteudo .quadros .quadro .texto p {
   section.servidores .conteudo .imagem .orbit-ring.two {
     width: 200px;
     height: 200px;
-  }
-  section.servidores .conteudo .imagem .neon-uptime .numero {
-    font-size: 90px;
-  }
-  section.servidores .conteudo .imagem .neon-uptime .numero::before {
-    content: "99.98";
-  }
-  section.servidores .conteudo .imagem .neon-uptime .percent {
-    font-size: 45px;
   }
   section.servidores .conteudo .imagem .tag {
     bottom: 20px;

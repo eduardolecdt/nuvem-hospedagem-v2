@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="coolifyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="120" fill="url(#coolifyGrad)"/>
+  <path d="M128 56c-39.8 0-72 32.2-72 72s32.2 72 72 72c19.9 0 37.9-8.1 50.9-21.1l-16.9-16.9c-8.5 8.5-20.2 13.8-34 13.8-26.5 0-48-21.5-48-48s21.5-48 48-48c13.8 0 25.5 5.3 34 13.8l16.9-16.9C165.9 64.1 147.9 56 128 56z" fill="white"/>
+  <circle cx="160" cy="128" r="16" fill="white"/>
+</svg>
